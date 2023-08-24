@@ -1,8 +1,8 @@
 {
-  "name": "mediaManager",
+  "name": "media-manager",
   "displayName": "Media manager",
   "publisher": "AlessandroMurtas",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.58.0"
   },
@@ -13,20 +13,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "mediaManager.pause",
+        "command": "media-manager.pause",
         "title": "Pause"
       },
       {
-        "command": "mediaManager.previousMedia",
+        "command": "media-manager.previousMedia",
         "title": "Previous Media"
       },
       {
-        "command": "mediaManager.nextMedia",
+        "command": "media-manager.nextMedia",
         "title": "Next Media"
-      },
-      {
-        "command": "mediaManager.init",
-        "title": "Init"
       }
     ],
     "configuration": {

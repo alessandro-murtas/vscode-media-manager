@@ -1,1 +1,1 @@
-# vscode-media-manager
+# Media manager

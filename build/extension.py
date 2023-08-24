@@ -3,6 +3,8 @@
 import sys
 from enum import Enum
 
+import win32api
+
 import vscode
 from vscode import *
 
@@ -11,7 +13,7 @@ import asyncio
 from winsdk.windows.media.control import \
     GlobalSystemMediaTransportControlsSessionManager as MediaManager
 
-ext = vscode.Extension(name="mediaManager", display_name="Media manager", version="0.0.1")
+ext = vscode.Extension(name="media-manager", display_name="Media manager", version="1.0.0")
 
 class Status(Enum):
     CLOSED = 0
@@ -105,19 +107,19 @@ def on_activate():
 
 @ext.command()
 def pause():
-    asyncio.run(stop_playback())
+    win32api.keybd_event(0xb3, 34)
     vscode.window.show_info_message(f"{asyncio.run(get_status())}")
 
 
 @ext.command()
 def previous_media():
-    asyncio.run(previous_song())
+    win32api.keybd_event(0xb1, 34)
     vscode.window.show_info_message(f"{asyncio.run(get_status())}")
 
 
 @ext.command()
 def next_media():
-    asyncio.run(next_song())
+    win32api.keybd_event(0xb0, 34)
     vscode.window.show_info_message(f"{asyncio.run(get_status())}")
 
 
