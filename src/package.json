@@ -1,0 +1,42 @@
+{
+  "name": "mediaManager",
+  "displayName": "Media manager",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.58.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./build/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mediaManager.pause",
+        "title": "Pause"
+      },
+      {
+        "command": "mediaManager.previousMedia",
+        "title": "Previous Media"
+      },
+      {
+        "command": "mediaManager.nextMedia",
+        "title": "Next Media"
+      },
+      {
+        "command": "mediaManager.init",
+        "title": "Init"
+      }
+    ],
+    "configuration": {
+      "title": "Media manager",
+      "properties": {}
+    }
+  },
+  "activationEvents": [
+    "onCommand:mediaManager.pause",
+    "onCommand:mediaManager.previousMedia",
+    "onCommand:mediaManager.nextMedia",
+    "onCommand:mediaManager.init"
+  ]
+}
