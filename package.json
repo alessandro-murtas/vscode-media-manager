@@ -2,7 +2,8 @@
   "name": "mediaManager",
   "displayName": "Media manager",
   "publisher": "AlessandroMurtas",
-  "version": "1.0.0",
+  "icon": "logo.png",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.58.0"
   },
