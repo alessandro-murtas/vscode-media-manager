@@ -1,6 +1,7 @@
 {
   "name": "mediaManager",
   "displayName": "Media manager",
+  "publisher": "AlessandroMurtas",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.58.0"
@@ -35,5 +36,9 @@
   },
   "activationEvents": [
     "onStartupFinished"
-  ]
+  ],
+  "repository": {
+    "type": "GitHub",
+    "url": "https://github.com/trimone9000/vscode-media-manager"
+  }
 }
