@@ -187,8 +187,8 @@ class Webview {
 
 function activate(context) {
   let globalStorage = {}
-  console.log("The Extension 'media-manager' has started")
-  let pause = vscode.commands.registerCommand('media-manager.pause', async function () {
+  console.log("The Extension 'mediaManager' has started")
+  let pause = vscode.commands.registerCommand('mediaManager.pause', async function () {
     let funcName = "pause"
     let pyVar = "python"
     let py = spawn(pyVar, [pythonPath, funcName])
@@ -205,7 +205,7 @@ function activate(context) {
     })
   })
   context.subscriptions.push(pause)
-  let previousMedia = vscode.commands.registerCommand('media-manager.previousMedia', async function () {
+  let previousMedia = vscode.commands.registerCommand('mediaManager.previousMedia', async function () {
     let funcName = "previous_media"
     let pyVar = "python"
     let py = spawn(pyVar, [pythonPath, funcName])
@@ -222,7 +222,7 @@ function activate(context) {
     })
   })
   context.subscriptions.push(previousMedia)
-  let nextMedia = vscode.commands.registerCommand('media-manager.nextMedia', async function () {
+  let nextMedia = vscode.commands.registerCommand('mediaManager.nextMedia', async function () {
     let funcName = "next_media"
     let pyVar = "python"
     let py = spawn(pyVar, [pythonPath, funcName])
@@ -239,7 +239,7 @@ function activate(context) {
     })
   })
   context.subscriptions.push(nextMedia)
-  let getInfo = vscode.commands.registerCommand('media-manager.getInfo', async function () {
+  let getInfo = vscode.commands.registerCommand('mediaManager.getInfo', async function () {
     let funcName = "get_info"
     let pyVar = "python"
     let py = spawn(pyVar, [pythonPath, funcName])
@@ -258,7 +258,7 @@ function activate(context) {
   context.subscriptions.push(getInfo)
   createStatusBarItem()
   setInterval(() => {
-    vscode.commands.executeCommand('media-manager.getInfo')
+    vscode.commands.executeCommand('mediaManager.getInfo')
   }, 1000)
 }
 
@@ -312,7 +312,7 @@ function createStatusBarItem() {
 
   item = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 1)
   item.text = "$(chevron-left)"
-  item.command = "media-manager.previousMedia"
+  item.command = "mediaManager.previousMedia"
   item.tooltip = "Previous song"
   item.show()
 
@@ -320,7 +320,7 @@ function createStatusBarItem() {
 
   item = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 1)
   item.text = "$(triangle-right)"
-  item.command = "media-manager.pause"
+  item.command = "mediaManager.pause"
   item.tooltip = "Pause"
   item.show()
 
@@ -328,7 +328,7 @@ function createStatusBarItem() {
 
   item = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 1)
   item.text = "$(chevron-right)"
-  item.command = "media-manager.nextMedia"
+  item.command = "mediaManager.nextMedia"
   item.tooltip = "Next song"
   item.show()
 

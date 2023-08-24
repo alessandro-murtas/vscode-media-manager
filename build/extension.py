@@ -13,7 +13,7 @@ import asyncio
 from winsdk.windows.media.control import \
     GlobalSystemMediaTransportControlsSessionManager as MediaManager
 
-ext = vscode.Extension(name="media-manager", display_name="Media manager", version="1.0.0")
+ext = vscode.Extension(name="mediaManager", display_name="Media manager", version="1.0.0")
 
 class Status(Enum):
     CLOSED = 0

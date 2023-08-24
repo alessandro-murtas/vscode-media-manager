@@ -1,5 +1,5 @@
 {
-  "name": "media-manager",
+  "name": "mediaManager",
   "displayName": "Media manager",
   "publisher": "AlessandroMurtas",
   "version": "1.0.0",
@@ -13,15 +13,15 @@
   "contributes": {
     "commands": [
       {
-        "command": "media-manager.pause",
+        "command": "mediaManager.pause",
         "title": "Pause"
       },
       {
-        "command": "media-manager.previousMedia",
+        "command": "mediaManager.previousMedia",
         "title": "Previous Media"
       },
       {
-        "command": "media-manager.nextMedia",
+        "command": "mediaManager.nextMedia",
         "title": "Next Media"
       }
     ],
@@ -35,6 +35,6 @@
   ],
   "repository": {
     "type": "GitHub",
-    "url": "https://github.com/trimone9000/vscode-media-manager"
+    "url": "https://github.com/trimone9000/vscode-mediaManager"
   }
 }
