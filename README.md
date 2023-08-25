@@ -2,7 +2,7 @@
 
 This extension lets you control every media player (Spotify, WMP, MediaMonkey...) and show media info on your status bar
 
-![Alt text](assets/preview.png "Extension preview")
+![Alt text](https://github.com/trimone9000/vscode-media-manager/raw/master/assets/preview.png "Extension preview")
 
 ### Table of Contents
 1. [Introduction](#introduction)
