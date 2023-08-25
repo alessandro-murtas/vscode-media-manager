@@ -2,6 +2,7 @@
 const vscode = require("vscode")
 const spawn = require("child_process").spawn
 const path = require("path")
+const { kill } = require("process")
 const pythonPath = path.join(__dirname, "extension.py")
 const requirements = path.join(__dirname, "../requirements.txt")
 const osvar = process.platform
@@ -193,6 +194,8 @@ function activate(context) {
     let pyVar = "python"
     let py = spawn(pyVar, [pythonPath, funcName])
 
+    kill_python(py)
+
     py.stdout.on("data", (data) => {
       try {
         updateInfo(data)
@@ -209,6 +212,8 @@ function activate(context) {
     let funcName = "previous_media"
     let pyVar = "python"
     let py = spawn(pyVar, [pythonPath, funcName])
+
+    kill_python(py)
 
     py.stdout.on("data", (data) => {
       try {
@@ -227,6 +232,8 @@ function activate(context) {
     let pyVar = "python"
     let py = spawn(pyVar, [pythonPath, funcName])
 
+    kill_python(py)
+
     py.stdout.on("data", (data) => {
       try {
         updateInfo(data)
@@ -243,6 +250,8 @@ function activate(context) {
     let funcName = "get_info"
     let pyVar = "python"
     let py = spawn(pyVar, [pythonPath, funcName])
+
+    kill_python(py)
 
     py.stdout.on("data", (data) => {
       try {
@@ -333,4 +342,17 @@ function createStatusBarItem() {
   item.show()
 
   buttons['Next'] = item
+}
+
+function kill_python(py)
+{
+  seconds = 2
+
+  setTimeout(() => {
+    try {
+      py.kill()
+    } catch (e) {
+      console.log('Cannot kill process')
+    }
+  }, seconds*1000)
 }
