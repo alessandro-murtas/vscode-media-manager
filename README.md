@@ -27,7 +27,7 @@ ext install mediaManager
 ```
 ### Setup
 
-After you have installed this extension no further setup is required
+After you have installed this extension the only thing you have to do is to install Python on your computer if you don't already have it installed.
 
 ### Why should i use Media manager?
 
