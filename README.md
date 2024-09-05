@@ -27,7 +27,15 @@ ext install mediaManager
 ```
 ### Setup
 
-After you have installed this extension the only thing you have to do is to install Python on your computer if you don't already have it installed.
+After you have installed this extension the only thing you have to do is to install Python3 and install the following python packages:
+* pywin32
+* winsdk
+* vscode-ext
+
+You can install them with this command: 
+```sh
+pip install pywin32 winsdk vscode-ext
+```
 
 ### Why should i use Media manager?
 
